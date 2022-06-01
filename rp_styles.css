@@ -1,0 +1,159 @@
+* {
+  /* remove all borders and paddings */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /*Color of a background.
+    I found it on 'Colors Generator' + 'Color Gradient' websites */
+  background: linear-gradient(
+    90deg,
+    rgba(176, 176, 176, 1) 0%,
+    rgba(112, 112, 112, 1) 15%,
+    rgba(100, 100, 100, 1) 35%,
+    rgba(100, 100, 100, 1) 65%,
+    rgba(112, 112, 112, 1) 85%,
+    rgba(176, 176, 176, 1) 100%
+  );
+  /* font "lato" link in rp_index.html */
+  font-family: "Lato", sans-serif;
+
+  /* solution to fit all content on a page and not owerflow it (vh = viewport hight) */
+  min-height: 100vh;
+}
+
+header {
+  font-size: 1.5rem;
+  /* vertical flex display direction  */
+  flex-direction: column;
+}
+
+header,
+form {
+  min-height: 20vh;
+  /* wrap all content like divs in flexboxes */
+  display: flex;
+  /* center flex boxes */
+  justify-content: center;
+  align-items: center;
+}
+
+/* resizing input and 'add' button */
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  border: none;
+  background: white;
+  /* removes borders inside input */
+  outline: none;
+}
+
+form button {
+  /* start colors before transition */
+  color: #646464;
+  background: rgb(176, 176, 176);
+  /* makes an item clickable */
+  cursor: pointer;
+  /* slowers transition from action(like change color) with pause of 0.3sec*/
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  /* colors after transition */
+  background: rgb(112, 112, 112);
+  color: rgb(176, 176, 176);
+}
+
+.pick-button {
+  /* wrap all content like <div>s in flexboxes */
+  display: flex;
+  /* center items horizontally */
+  justify-content: center;
+  /* center items vertically */
+  align-items: center;
+}
+
+/* !my code */
+.pick {
+  /* add some padding and change font size */
+  border: none;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  /* start colors before transition */
+  color: #646464;
+  background: rgb(176, 176, 176);
+  /* makes an item clickable */
+  cursor: pointer;
+  /* slowers transition from action(like change color) with pause of 0.3sec*/
+  transition: all 0.3s ease;
+}
+
+.pick:hover {
+  /* colors after transition */
+  background: rgb(112, 112, 112);
+  color: rgb(176, 176, 176);
+}
+
+/* ! */
+
+.user-li-container {
+  /* create flexbox */
+  display: flex;
+  /* center items horizontally */
+  justify-content: center;
+  /* center items vertically */
+  align-items: center;
+  /* padding */
+  padding-top: 1rem;
+}
+
+.userUl {
+  /* remove markers near list items */
+  list-style: none;
+  /* width of item in comparison to page */
+  min-width: 30%;
+}
+
+.licontainer {
+  margin: 0.5rem;
+  background: white;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.5s ease;
+}
+
+.new-li-delete-button {
+  color: #646464;
+  background: rgb(176, 176, 176);
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3ms ease;
+}
+
+/* !my code */
+
+.new-li-delete-button:hover {
+  background: rgb(112, 112, 112);
+  color: rgb(176, 176, 176);
+}
+
+.new-li {
+  padding: 0rem 0.5rem;
+}
+
+.fa-trash-can {
+  pointer-events: none;
+}
+
+/* animation of fall, when deleted 'userList' */
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}

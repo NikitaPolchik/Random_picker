@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- title of a project -->
+    <title>Random picker</title>
+    <!-- link to css file -->
+    <link rel="stylesheet" href="rp_styles.css" />
+    <!-- link to font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <!-- link to icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <!-- main div class 'container' -->
+    <div class="container">
+      <!-- head text -->
+      <header>
+        <h3 class="header-random">random</h3>
+        <h1 class="header-picker">PickeR</h1>
+      </header>
+
+      <form>
+        <!-- text input for user -->
+        <input type="text" , placeholder="Type here" , class="text-input" />
+        <!-- button with 'plus' icon inside -->
+        <button class="add-li-button">
+          <!-- 'plus' icon -->
+          <i class="fa-solid fa-plus"></i>
+        </button>
+      </form>
+
+      <div class="pick-button">
+        <!-- 'Pick a random' button -->
+        <button class="pick" type="submit">PICK A RANDOM</button>
+      </div>
+
+      <!-- List for a user -->
+      <div class="user-li-container">
+        <ul class="userUl"></ul>
+      </div>
+    </div>
+
+    <!-- connection to JavaScript file -->
+    <script src="rp_app.js"></script>
+  </body>
+</html>
