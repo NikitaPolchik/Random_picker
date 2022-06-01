@@ -6,7 +6,7 @@ const userList = document.querySelector(".userUl");
 const pickRandomButton = document.querySelector(".pick");
 
 // *Event listeners
-// !
+
 document.addEventListener("DOMContentLoaded", getUserLists);
 // add "addListItem" on click
 addButton.addEventListener("click", addListItem);
@@ -14,7 +14,7 @@ addButton.addEventListener("click", addListItem);
 userList.addEventListener("click", deleteUserList);
 // add randomize function to 'pick a random button'
 pickRandomButton.addEventListener("click", randomize);
-// !
+
 // *Functions
 
 function addListItem(event) {
@@ -24,6 +24,11 @@ function addListItem(event) {
   const userDiv = document.createElement("div");
   // add a class 'user-li-container' to userDiv
   userDiv.classList.add("licontainer");
+  //!
+
+  userDiv.setAttribute("id", "random");
+
+  //!
   // create LI
   const newList = document.createElement("li");
   // text in textInput will be created with userDiv
@@ -46,6 +51,15 @@ function addListItem(event) {
   userList.appendChild(userDiv);
   textInput.value = "";
 }
+
+//!
+function addValueToId() {
+  let noname = document.getElementById("random");
+  if (noname) {
+    noname.style.backgroundColor = "red";
+  }
+}
+//!
 
 function deleteUserList(e) {
   // constant for target event 'deleteUserList'
@@ -94,7 +108,7 @@ function getUserLists() {
   userlists.forEach(function (licontainer) {
     // create DIV
     const userDiv = document.createElement("div");
-    // add a class 'user-li-container' to userDiv
+    // add a class 'licontainer' to userDiv
     userDiv.classList.add("licontainer");
     // create LI
     const newList = document.createElement("li");
@@ -145,10 +159,4 @@ function randomize() {
     // else parse 'userlists'
     userlists = JSON.parse(localStorage.getItem("userlists"));
   }
-
-  const licontainerEmptyArray = [];
-  licontainerEmptyArray.push(JSON.stringify(licontainer));
-  // let randomized = Math.floor(Math.random() * (licontainerArray.length));
-  // let size = licontainerEmptyArray.length;
-  console.log(licontainerEmptyArray[1]);
 }
